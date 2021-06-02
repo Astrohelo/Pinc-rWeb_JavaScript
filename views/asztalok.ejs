@@ -1,0 +1,35 @@
+<%- include('header',{active: 'asztalok'}) -%>
+
+
+    <div class="container">
+        <div class="row">
+          <% asztalok.forEach(function(egyAsztal){ %>
+            
+            <div class="col-lg-4 col-md-6 col-12">
+                      <div class="card" style="width: 18rem; margin-bottom: 5pt;">
+                          <img class="card-img-top" src="asztalkep.png" alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title d-flex justify-content-between"><%= egyAsztal.nev%>
+                              <a href="/asztalok/edit/<%= egyAsztal._id%>" class="btn-light"><i class="fas fa-edit"></i></a>
+                              <a href="/asztalok/del/<%= egyAsztal._id%>" class="btn-light"> <i class="fas fa-trash-alt"></i></a>
+                            </h5>
+                            <p class="card-text"><%= egyAsztal.ules%></p>
+                            <hr>
+                            <a href="/rendeles/<%= egyAsztal._id%>" class="card-link">Rendelés</a>
+                          </div>
+                      </div>
+              </div>
+
+          <% }); %>
+
+            <div class="col-lg-4 col-lm-6 col-12">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                        <a href="/asztalok/new" class="card-link">Új asztal készitése</a>
+                        </div>
+                    </div>
+              </div>
+        </div>
+    </div>
+ 
+<%- include('footer') -%>

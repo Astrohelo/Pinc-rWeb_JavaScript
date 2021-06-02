@@ -1,0 +1,23 @@
+<%- include('header',{active: 'etlap'}) -%>
+
+    <ul class="list-group align-items-center">
+      <% etlapok.forEach(function(egyEtlap){ %>
+        <li class="col-lg-4 col-md-6 col-12 list-group-item d-flex justify-content-between align-items-center">
+          <%= egyEtlap.nev%>
+          <a href="/etlap/del/<%= egyEtlap._id%>" class="btn-light"> <i class="fas fa-trash-alt"></i></a>
+        </li>
+        
+      <% }); %>
+      <li class="col-lg-4 col-md-6 col-12 list-group-item d-flex justify-content-between align-items-center">
+        <form method="POST">
+          <div class="form-group">
+            <input type="text" class="form-control" id="nev" name="nev" placeholder="Új étel">
+          </div>
+                   
+            <input type="submit" class="btn btn-primary"  value="Új étel"/>
+        </form>
+        
+      </li>
+    </ul>
+
+<%- include('footer') -%>

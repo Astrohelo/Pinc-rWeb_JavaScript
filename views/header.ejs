@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Product example · Bootstrap</title>
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/0608f7874a.js" crossorigin="anonymous"></script>
+    <style>
+      body{
+        background-image: url(/background.jpg) ; 
+        background-size: cover
+      }
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+     
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item <% if (active==='asztalok'){ %>active<% }%>">
+              <a class="nav-link" href="/asztalok">Asztalok <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item <% if (active==='etlap'){ %>active<% }%>">
+              <a class="nav-link" href="/etlap">Étlap</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
